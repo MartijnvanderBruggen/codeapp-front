@@ -20,13 +20,15 @@ export class TableComponent implements OnDestroy, OnInit {
       .get<CodeSnippet[]>("http://localhost:8000/codeSnippets")
       .subscribe((data) => {
         this.CodeSnippets = (data as any).data;
-        console.log(this.CodeSnippets);
-        // Calling the DT trigger to manually render the table
       });
   }
 
-  openModal(element: any) {
-    console.log(element);
+  delete(element: any) {
+    this.httpClient
+      .delete<CodeSnippet>("http://localhost:8000/codeSnippets/" + element.id)
+      .subscribe((data) => {
+        console.log("deleted");
+      });
   }
 
   ngOnDestroy(): void {
