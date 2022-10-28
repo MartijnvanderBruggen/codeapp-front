@@ -7,8 +7,9 @@ import { CreateCodeSnippetComponent } from "./create-code-snippet/create-code-sn
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { TableComponent } from "./table/table.component";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatTableModule } from "@angular/material/table";
+import { MatIconModule } from "@angular/material/icon";
 @NgModule({
   declarations: [AppComponent, CreateCodeSnippetComponent, TableComponent],
   imports: [
@@ -17,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatTableModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,1 +1,33 @@
-<div>test</div>
+<div class="data-table-container">
+    <table mat-table [dataSource]="CodeSnippets" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>id</th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+
+        </ng-container>
+        <!-- Title Column -->
+        <ng-container matColumnDef="title">
+            <th mat-header-cell *matHeaderCellDef> title</th>
+            <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+        </ng-container>
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> actions</th>
+            <td mat-cell *matCellDef="let element">
+                <span class="mat-button-wrapper">
+                    <mat-icon (click)="openModal(element)" _ngcontent-ofj-c248="" role="img"
+                        class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                        aria-hidden="true" data-mat-icon-type="font">delete</mat-icon>
+                </span>
+                <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span>
+                <span class="mat-button-focus-overlay"></span>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+    </table>
+</div>
