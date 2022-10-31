@@ -10,8 +10,15 @@ import { TableComponent } from "./table/table.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatTableModule } from "@angular/material/table";
 import { MatIconModule } from "@angular/material/icon";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { ToolbarComponent } from "./toolbar/toolbar.component";
 @NgModule({
-  declarations: [AppComponent, CreateCodeSnippetComponent, TableComponent],
+  declarations: [
+    AppComponent,
+    CreateCodeSnippetComponent,
+    TableComponent,
+    ToolbarComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,6 +27,7 @@ import { MatIconModule } from "@angular/material/icon";
     BrowserAnimationsModule,
     MatTableModule,
     MatIconModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

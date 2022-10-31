@@ -1,7 +1,13 @@
-<p>
-    <label for="title">title: </label>
-    <input type="text" [formControl]="title">
-    <label for="content">content: </label>
-    <input type="text" [formControl]="content">
-    <button (click)="send()">send</button>
-</p>
+<div class="form-container" [hidden]="hide">
+    <form [formGroup]="snippetForm" (ngSubmit)="onSubmit()">
+        <label for="title">Title: </label>
+        <input id="title" type="text" formControlName="title" required>
+
+        <label for="content">Content: </label>
+        <textarea id="content" type="text" formControlName="content"></textarea>
+
+
+        <p>Complete the form to enable button.</p>
+        <button type="submit" [disabled]="!snippetForm.valid">Submit</button>
+    </form>
+</div>

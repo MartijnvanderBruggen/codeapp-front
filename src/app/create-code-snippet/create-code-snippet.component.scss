@@ -1,0 +1,38 @@
+:host {
+    margin-top: 20px;
+}
+
+.form-container {
+    position: relative;
+    width: 90vw;
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    margin: 0 auto;
+}
+
+.form {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.form>* {
+    width: 80vw;
+    margin: 10px 0px 10px;
+    align-self: center;
+}
+
+.form>.button {
+    width: 30%;
+    height: 8vh;
+
+    align-self: center;
+
+
+}
+
+input:textarea {
+    width: 100%;
+    height: auto;
+}

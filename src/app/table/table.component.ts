@@ -31,6 +31,13 @@ export class TableComponent implements OnDestroy, OnInit {
       });
   }
 
+  edit(element: any) {
+    //open modal
+  }
+  view(element: any) {
+    //open modal
+  }
+
   ngOnDestroy(): void {
     // Do not forget to unsubscribe the event
   }
